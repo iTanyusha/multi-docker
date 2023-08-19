@@ -1,0 +1,12 @@
+[submodule "client"]
+	path = client
+	url = https://github.com/iTanyusha/client.git
+[submodule "nginx"]
+	path = nginx
+	url = https://github.com/iTanyusha/nginx.git
+[submodule "server"]
+	path = server
+	url = https://github.com/iTanyusha/server.git
+[submodule "worker"]
+	path = worker
+	url = https://github.com/iTanyusha/worker.git
