@@ -1,0 +1,16 @@
+language: generic
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t itanyusha/react-test -f ./client/Dockerfile.dev ./client
+
+script:
+  - docker run -e CI=true itanyusha/react-test npm test
+
+after_success:
+  - docker build -t itanyusha/multi-client ./client
+  - docker build -t itanyusha/multi-nginx ./nginx
+  - docker build -t itanyusha/multi-server ./server
+  - docker build -t itanyusha/multi-worker ./worker
