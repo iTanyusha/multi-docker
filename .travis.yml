@@ -14,3 +14,11 @@ after_success:
   - docker build -t itanyusha/multi-nginx ./nginx
   - docker build -t itanyusha/multi-server ./server
   - docker build -t itanyusha/multi-worker ./worker
+
+  # Log in to docker hub
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  # Push images to docker hub
+  - docker push itanyusha/multi-client
+  - docker push itanyusha/multi-nginx
+  - docker push itanyusha/multi-server
+  - docker push itanyusha/multi-worker
