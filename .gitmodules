@@ -1,0 +1,12 @@
+[submodule "client"]
+	path = client
+	url = ./client
+[submodule "nginx"]
+	path = nginx
+	url = ./nginx
+[submodule "server"]
+	path = server
+	url = ./server
+[submodule "worker"]
+	path = worker
+	url = ./worker
